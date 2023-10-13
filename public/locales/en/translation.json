@@ -10,11 +10,17 @@
 		"secondary_button_text": "Go to base version"
 	},
 	"header": {
-		"features": "Features",
-		"pricing": "Pricing",
-		"blog": "Blog",
-		"contact": "Contacts",
-		"primary_button_text": "Download",
+		"agriturismo": "Farmhouse",
+		"sostenibilita": "Sustainability",
+		"esperienze": "Experiences",
+		"toptips": "Top-tips",
+		"aziendaagricola": "Farmstead",
+		"olioevino": "Olive oil and Wine",
+		"zootecnia": "Animals",
+		"degustazioni": "Tastings",
+		"shop": "Shop",
+		"news": "News",
+		"primary_button_text": "Scarica",
 		"secondary_button_text": "Login"
 	},
 	"features": {
