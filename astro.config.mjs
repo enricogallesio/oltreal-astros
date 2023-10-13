@@ -34,7 +34,7 @@ export default defineConfig({
 				i18n: {
 					structure: "multiple_folders",
 					locales: ["en", "it"],
-					default_locale: "en",
+					default_locale: "it",
 				},
 				collections: [
 					// Content collections

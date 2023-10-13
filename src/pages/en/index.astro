@@ -7,12 +7,12 @@ import Hero from "@components/hero.astro";
 import Newsletter from "@components/newsletter.astro";
 import Layout from "@layouts/Layout.astro";
 
-changeLanguage("it");
+changeLanguage("en");
 ---
 
 <Layout>
 	<Container>
-		<Hero dynamic={true} />
+		<Hero />
 		<Features />
 		<Faq />
 		<Newsletter />
