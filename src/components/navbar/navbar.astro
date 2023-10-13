@@ -7,16 +7,20 @@ import { t } from "i18next";
 
 export const menuitems = [
 	{
-		title: "Sub items",
+		title: "header.agriturismo",
 		children: [
-			{ title: "Subitem 1", path: "#" },
-			{ title: "Subitem 2", path: "#" },
-			{ title: "Subitem 3", path: "#" },
+			{ title: "header.esperienze", path: "#" },
+			{ title: "header.sostenibilita", path: "#" },
+			{ title: "header.toptips", path: "#" },
 		],
 	},
 	{
-		title: "header.pricing",
-		path: "/pricing",
+		title: "header.aziendaagricola",
+		children: [
+			{ title: "header.olioevino", path: "#" },
+			{ title: "header.zootecnia", path: "#" },
+			
+		],
 	},
 	{
 		title: "header.blog",
@@ -74,8 +78,8 @@ export const menuitems = [
 			{
 				menuitems.map((item) =>
 					item.children && item.children.length ? (
-						<div @click.away="open = false" class="relative" x-data="{ open: false }">
-							<Button @click="open = !open" style="link" size="sm" class="mt-[2px]">
+						<div @mouseover="open = true" @mouseleave="open = false" class="relative" x-data="{ open: false }">
+							<Button style="link" size="sm" class="mt-[2px]">
 								{t(item.title)}
 								<svg
 									fill="currentColor"
@@ -119,7 +123,8 @@ export const menuitems = [
 											}`}
 											:class="{ 'bg-gray-200 dark:bg-gray-600': isActive }"
 										>
-											{subitem.title}
+											
+											{t(subitem.title)}
 										</Link>
 									)}
 								</div>
@@ -151,6 +156,7 @@ export const menuitems = [
 				)
 			}
 		</div>
+		
 		<div class="mt-4 md:mt-0 flex flex-col md:flex-row gap-4">
 			<Link href="/login" style="outline" class="md:px-3 md:py-2 leading-6">
 				{t("header.secondary_button_text")}
