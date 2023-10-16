@@ -1,0 +1,12 @@
+---
+import { LanguageSelector } from "astro-i18next/components";
+import { Icon } from "astro-icon";
+
+const { icon = "", languageMapping = { en: "English", it: "Italiano" }, ...rest } = Astro.props;
+---
+
+<div class="flex">
+	<!-- <Icon name="ion:language" class="w-5 darkDISABLED:text-white" /> -->
+	<Icon name="ph:flag-bold" width="1rem" class="darkDISABLED:invert mr-1" alt="Logo" />
+	<LanguageSelector showFlag={false} languageMapping={languageMapping} class="bg-transparent tracking-wider" />
+</div>

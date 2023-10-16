@@ -44,8 +44,8 @@ export const menuitems = [
 		<a
 			href={localizePath("/")}
 			class="flex gap-3 items-center text-lg font-semibold tracking-widest text-gray-900 uppercase rounded-lg darkDISABLED:text-white focus:outline-none focus:shadow-outline">
-			<Icon name="logo" width="30" class="darkDISABLED:invert" alt="Logo"></Icon>
-			Astros
+			<!-- <Icon name="logo" width="30" class="darkDISABLED:invert" alt="Logo"></Icon> -->
+			LOGO
 		</a>
 		<button class="md:hidden text-gray-500 w-10 h-10 relative focus:outline-none" @click="open = !open">
 			<span class="sr-only">Menu</span>
@@ -77,13 +77,13 @@ export const menuitems = [
 		x-transition:leave="transition ease-in duration-200"
 		x-transition:leave-start="opacity-100 transform scale-100"
 		x-transition:leave-end="opacity-0 transform scale-90"
-		class="uppercase tracking-wider first-letter:md:mt-0 lg:pl-8 md:items-center flex-grow pb-4 md:pb-0 flex-col gap-2 transition-all ease-out md:transition-none md:justify-center md:flex-row hidden">
+		class="uppercase tracking-widest first-letter:md:mt-0 lg:pl-8 md:items-center flex-grow pb-4 md:pb-0 flex-col gap-2 transition-all ease-out md:transition-none md:justify-center md:flex-row hidden">
 		<div class="flex flex-col flex-grow text-center gap-2 md:justify-end md:items-center md:flex md:flex-row md:mx-auto">
 			{
 				menuitems.map((item) =>
 					item.children && item.children.length ? (
 						<div @mouseover="open = true" @mouseleave="open = false" class="relative " x-data="{ open: false }">
-							<Button style="link" size="sm" class="mt-[2px] uppercase tracking-wider">
+							<Button style="link" size="sm" class="mt-[2px] uppercase tracking-widest">
 								{t(item.title)}
 								<svg
 									fill="currentColor"
@@ -105,7 +105,7 @@ export const menuitems = [
 								x-transition:leave="transition ease-in duration-75"
 								x-transition:leave-start="transform opacity-100 scale-100"
 								x-transition:leave-end="transform opacity-0 scale-95"
-								class="absolute mt-2 bg-white right-0 w-full origin-top-right rounded-md md:w-48 outline-2 border border-gray-300">
+								class="normal-case absolute mt-2 bg-white right-0 w-full origin-top-right rounded-md md:w-48 outline-2 border border-gray-300">
 								<div class="px-2 py-2 rounded-md shadow darkDISABLED:bg-gray-800">
 									{ item.children.map((subitem) =>
 										<Link
@@ -125,7 +125,7 @@ export const menuitems = [
 												checkPath();
 												window.addEventListener('popstate', checkPath);
 											}`}
-											:class="{ 'bg-gray-200 darkDISABLED:bg-gray-600': isActive }"
+											:class="{ 'bg-gray-200 darkDISABLED:bg-gray-600 lowercase': isActive }"
 										>
 											
 											{t(subitem.title)}
@@ -165,7 +165,7 @@ export const menuitems = [
 <!-- 			<Link href="/login" style="outline" class="md:px-3 md:py-2 leading-6">
 				{t("header.secondary_button_text")}
 			</Link> -->
-			<Link href="https://github.com/zankhq/astros" class="md:px-3 md:py-2 leading-6">
+			<Link href="https://github.com/zankhq/astros" class="">
 				{t("header.primary_button_text")}
 			</Link>
 		</div>
