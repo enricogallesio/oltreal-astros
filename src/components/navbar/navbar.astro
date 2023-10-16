@@ -1,6 +1,8 @@
 ---
 import Link from "@components/ui/link.astro";
 import Button from "@components/ui/button.astro";
+import { Image } from 'astro:assets';
+import myLogo from "../../assets/oltrealmarelogo.png"
 import { Icon } from "astro-icon";
 import { localizePath } from "astro-i18next";
 import { t } from "i18next";
@@ -40,12 +42,13 @@ export const menuitems = [
 <div
 	x-data="{open: window.innerWidth < 768 ? false : true}"
 	class="flex flex-col max-w-screen-xl px-4 mx-auto md:items-center md:justify-between md:flex-row md:px-6 lg:px-8 z-10 md:pt-2 relative">
-	<div class=" p-4 flex flex-row items-center justify-between">
+	<div class=" p-4 sm:p-0 flex flex-row items-center justify-between">
 		<a
 			href={localizePath("/")}
-			class="flex gap-3 items-center text-lg font-semibold tracking-widest text-gray-900 uppercase rounded-lg darkDISABLED:text-white focus:outline-none focus:shadow-outline">
+			class="flex mt-[-1.5rem] gap-3 items-center text-lg font-semibold tracking-widest text-gray-900 uppercase rounded-lg darkDISABLED:text-white focus:outline-none focus:shadow-outline">
 			<!-- <Icon name="logo" width="30" class="darkDISABLED:invert" alt="Logo"></Icon> -->
-			LOGO
+			<Image src={myLogo} alt="Logo di Oltrealmare"  width="200"/>
+			
 		</a>
 		<button class="md:hidden text-gray-500 w-10 h-10 relative focus:outline-none" @click="open = !open">
 			<span class="sr-only">Menu</span>
