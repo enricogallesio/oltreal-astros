@@ -71,9 +71,12 @@ const makeTitle = title ? title + " | " + "Astros" : "Astros - Starter Template 
 		<script src="/src/pwa.ts"></script>
 	</head>
 	<body class="darkDISABLED:bg-stone-950">
-		<Upperbar />
-		<Navbar />
-		<slot />
+		<div class="bg-cover bg-no-repeat bg-center bg-landing bg-top">
+			<Upperbar />
+			<Navbar />
+			<slot />
+		</div>
+
 		<Footer />
 		<style is:global>
 			/* Improve Page speed */

@@ -7,6 +7,9 @@ module.exports = {
 			fontFamily: {
 				sans: ["Poppins", "Inter", ...defaultTheme.fontFamily.sans],
 			},
+			backgroundImage: {
+				landing: "url(/pubassets/landing_hero_bg.jpeg)",
+			},
 		},
 	},
 	plugins: [require("@tailwindcss/typography"), require.resolve("prettier-plugin-astro")],
