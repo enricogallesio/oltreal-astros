@@ -12,6 +12,9 @@ module.exports = {
 			backgroundImage: {
 				landing: "url(/pubassets/landing_hero_bg.jpeg)",
 			},
+			dropShadow: {
+				hero: "0 5px 5px rgba(0, 0, 0, 0.8)",
+			},
 		},
 	},
 	plugins: [require("@tailwindcss/typography"), require.resolve("prettier-plugin-astro")],
