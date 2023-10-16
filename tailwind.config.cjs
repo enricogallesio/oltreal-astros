@@ -6,7 +6,9 @@ module.exports = {
 		extend: {
 			fontFamily: {
 				sans: ["Poppins", "Inter", ...defaultTheme.fontFamily.sans],
+				display: ["Cabin Sketch"],
 			},
+
 			backgroundImage: {
 				landing: "url(/pubassets/landing_hero_bg.jpeg)",
 			},

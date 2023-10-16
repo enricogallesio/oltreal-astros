@@ -16,6 +16,8 @@ import "@fontsource/poppins/600.css";
 import "@fontsource/poppins/700.css";
 import "@fontsource/poppins/800.css";
 import "@fontsource/poppins/900.css";
+import "@fontsource/cabin-sketch/400.css";
+import "@fontsource/cabin-sketch/700.css";
 import { ViewTransitions } from "astro:transitions";
 
 export interface Props {
@@ -71,7 +73,7 @@ const makeTitle = title ? title + " | " + "Astros" : "Astros - Starter Template 
 		<script src="/src/pwa.ts"></script>
 	</head>
 	<body class="darkDISABLED:bg-stone-950">
-		<div class="bg-cover bg-no-repeat bg-center bg-landing bg-top">
+		<div class="bg-cover bg-no-repeat bg-center bg-landing bg-[center_top_-10rem]">
 			<Upperbar />
 			<Navbar />
 			<slot />
