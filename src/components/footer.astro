@@ -7,18 +7,18 @@ import { menuitems } from "@components/navbar/navbar.astro";
 import { t } from "i18next";
 ---
 
-<footer class="pb-12 pt-28 darkDISABLEDbg-stone-950">
+<footer class="pb-12 pt-28 darkDISABLED:bg-stone-950">
 	<div class="mx-auto max-w-6xl px-6 md:px-12 lg:px-6 xl:px-0">
 		<!-- DECOMMENT HERE IF YOU WANT YOUR LOGO IN THE FOOTER -->
 		<!-- <a href={localizePath("/")} aria-label="logo" class="group flex items-center justify-center space-x-2">
 			<Image class="inline-block" src={logo} alt="Astros" width={30} height={30} />
-			<span class="text-semibold duration-300 text-gray-400 group-hover:text-gray-900 darkDISABLEDtext-white darkDISABLEDgroup-hover:text-gray-100">
+			<span class="text-semibold duration-300 text-gray-400 group-hover:text-gray-900 darkDISABLED:text-white darkDISABLED:group-hover:text-gray-100">
 				Astros
 			</span>
 		</a> -->
-		<ul role="list" class="flex flex-wrap items-center justify-center gap-4 py-4 text-gray-600 darkDISABLEDtext-white sm:gap-8">
+		<ul role="list" class="flex flex-wrap items-center justify-center gap-4 py-4 text-gray-600 darkDISABLED:text-white sm:gap-8">
 			<li role="listitem">
-				<a href={localizePath("/")} class="duration-300 hover:text-gray-900 darkDISABLEDhover:text-gray-100">Home</a>
+				<a href={localizePath("/")} class="duration-300 hover:text-gray-900 darkDISABLED:hover:text-gray-100">Home</a>
 			</li>
 			{
 				menuitems.map(
@@ -26,7 +26,7 @@ import { t } from "i18next";
 						item &&
 						item.path && (
 							<li role="listitem">
-								<a href={localizePath(item.path)} class="duration-300 hover:text-gray-900 darkDISABLEDhover:text-gray-100">
+								<a href={localizePath(item.path)} class="duration-300 hover:text-gray-900 darkDISABLED:hover:text-gray-100">
 									{t(item.title)}
 								</a>
 							</li>
@@ -34,8 +34,8 @@ import { t } from "i18next";
 				)
 			}
 		</ul>
-		<div class="m-auto mt-4 flex w-max items-center justify-between space-x-4 text-gray-500 darkDISABLEDtext-white">
-			<a class="duration-300 hover:text-gray-900 darkDISABLEDhover:text-gray-100" href="#" title="twitter" target="blank" aria-label="twitter">
+		<div class="m-auto mt-4 flex w-max items-center justify-between space-x-4 text-gray-500 darkDISABLED:text-white">
+			<a class="duration-300 hover:text-gray-900 darkDISABLED:hover:text-gray-100" href="#" title="twitter" target="blank" aria-label="twitter">
 				<svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="m-auto h-5 w-5" viewBox="0 0 16 16">
 					<path
 						d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z">
@@ -43,7 +43,7 @@ import { t } from "i18next";
 				</svg>
 			</a>
 			<a
-				class="duration-300 hover:text-gray-900 darkDISABLEDhover:text-gray-100"
+				class="duration-300 hover:text-gray-900 darkDISABLED:hover:text-gray-100"
 				href="#"
 				title="facebook"
 				target="blank"
@@ -55,7 +55,7 @@ import { t } from "i18next";
 				</svg>
 			</a>
 			<a
-				class="duration-300 hover:text-gray-900 darkDISABLEDhover:text-gray-100"
+				class="duration-300 hover:text-gray-900 darkDISABLED:hover:text-gray-100"
 				href="#"
 				title="linkedin"
 				target="blank"
@@ -71,12 +71,12 @@ import { t } from "i18next";
 			<LanguageSelector
 				showFlag={false}
 				languageMapping={{ en: "English", it: "Italiano" }}
-				class="appearance-none py-1 px-2 rounded bg-slate-100 darkDISABLEDbg-stone-950"
+				class="appearance-none py-1 px-2 rounded bg-slate-100 darkDISABLED:bg-stone-950"
 			/>
 			<ThemeSelector />
 		</div>
 		<div class="mt-4 text-center">
-			<span class="text-sm tracking-wide text-gray-500 darkDISABLEDtext-white">
+			<span class="text-sm tracking-wide text-gray-500 darkDISABLED:text-white">
 				Copyright © Your Company 2023 - Present. All rights reserved
 			</span>
 		</div>

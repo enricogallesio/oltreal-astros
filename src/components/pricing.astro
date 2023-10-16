@@ -5,17 +5,17 @@ import Link from "@components/ui/link.astro";
 const { plan } = Astro.props;
 ---
 
-<div class="rounded-md p-8 xl:p-10 ring-1 ring-gray-200 darkDISABLEDbg-stone-950 darkDISABLEDring-gray-700">
+<div class="rounded-md p-8 xl:p-10 ring-1 ring-gray-200 darkDISABLED:bg-stone-950 darkDISABLED:ring-gray-700">
 	<div class="flex items-center justify-between gap-x-4">
-		<h3 id="tier-enterprise" class="text-lg font-semibold leading-8 text-gray-900 darkDISABLEDtext-white">{plan.name}</h3>
+		<h3 id="tier-enterprise" class="text-lg font-semibold leading-8 text-gray-900 darkDISABLED:text-white">{plan.name}</h3>
 	</div>
 	<p class="mt-6 flex items-baseline gap-x-1">
-		<span class="text-4xl font-bold tracking-tight text-gray-900 darkDISABLEDtext-white">
+		<span class="text-4xl font-bold tracking-tight text-gray-900 darkDISABLED:text-white">
 			{plan.price && typeof plan.price === "object" ? plan.price.monthly : plan.price}
 		</span>
 	</p>
 	<Link href="#" aria-describedby="tier-enterprise" style="outline" class="block w-full mt-6">{plan.button.text || "Get Started"}</Link>
-	<ul role="list" class="mt-8 space-y-3 text-sm leading-6 text-gray-600 darkDISABLEDtext-gray-300 xl:mt-10">
+	<ul role="list" class="mt-8 space-y-3 text-sm leading-6 text-gray-600 darkDISABLED:text-gray-300 xl:mt-10">
 		{
 			plan.features.map((item) => (
 				<li class="flex gap-x-3">

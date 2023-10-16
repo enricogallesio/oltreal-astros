@@ -8,12 +8,12 @@ import { t } from "i18next";
 const { dynamic = false } = Astro.props;
 ---
 
-<div class="relative isolate pt-14 darkDISABLEDbg-stone-950">
+<div class="relative isolate pt-14 darkDISABLED:bg-stone-950">
 	<div class="sm:pt-10">
 		<div class="mx-auto max-w-7xl">
 			<div class="mx-auto max-w-2xl text-center">
-				<h1 class="text-4xl font-bold tracking-tight text-black darkDISABLEDtext-white sm:text-6xl">{t("hero.title")}</h1>
-				<p class="mt-6 text-lg leading-8 text-gray-900 darkDISABLEDtext-gray-100">
+				<h1 class="text-4xl font-bold tracking-tight text-black darkDISABLED:text-white sm:text-6xl">{t("hero.title")}</h1>
+				<p class="mt-6 text-lg leading-8 text-gray-900 darkDISABLED:text-gray-100">
 					{t("hero.subtitle")}
 				</p>
 				<div class="mt-10 flex items-center justify-center gap-x-2 md:gap-x-6">
@@ -22,14 +22,14 @@ const { dynamic = false } = Astro.props;
 						dynamic ? (
 							<Link href="/" style="muted">
 								{t("hero_animated.secondary_button_text")}
-								<span aria-hidden="true" class="pl-1 text-black darkDISABLEDtext-white">
+								<span aria-hidden="true" class="pl-1 text-black darkDISABLED:text-white">
 									→
 								</span>
 							</Link>
 						) : (
 							<Link href="/animated" style="muted">
 								{t("hero.secondary_button_text")}
-								<span aria-hidden="true" class="pl-1 text-black darkDISABLEDtext-white">
+								<span aria-hidden="true" class="pl-1 text-black darkDISABLED:text-white">
 									→
 								</span>
 							</Link>
